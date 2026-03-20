@@ -34,7 +34,7 @@ const ThemedTextInput: React.FC<ThemedTextInputProps> = ({
       className={
         (danger && " border border-rose-600 ") +
         (className || "") +
-        " dark:bg-background-100/30 bg-background-100 rounded flex-row items-center justify-between "
+        " dark:bg-background-100/30 bg-background-100 rounded flex-row justify-between "
       }
     >
       <TextInput

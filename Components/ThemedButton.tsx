@@ -23,7 +23,11 @@ const ThemedButton: React.FC<ThemedButtonProps> = ({
 
   return (
     <Pressable
-      className={(className || "") + " active:opacity-50 "}
+      className={
+        (className || "") +
+        " active:opacity-50 " +
+        (props.disabled && " opacity-50")
+      }
       {...props}
       style={buttonColor && { backgroundColor }}
     >

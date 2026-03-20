@@ -52,9 +52,8 @@ export const TagProvider: React.FC<TagProviderProps> = ({ children }) => {
       if (!data.success) {
         throw new Error(data.error);
       }
-      setTags(data.data);
-
-      setCategorizedTags(data.data1);
+      setTags(data.tags);
+      setCategorizedTags(data.data);
     } catch (error) {
       console.error("Failed to fetch tags:", error);
     } finally {

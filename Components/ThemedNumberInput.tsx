@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { ScrollView, TextInput, View } from "react-native";
 import ThemedText from "./ThemedText";
 import ThemedButton from "./ThemedButton";
@@ -9,6 +9,7 @@ interface ThemedNumberInputProps {
   textColor: Colors;
   minNumber: number;
   maxNumber: number;
+  onNumberSelect: (number: number) => void;
 }
 
 const ThemedNumberInput: React.FC<ThemedNumberInputProps> = ({
@@ -17,6 +18,7 @@ const ThemedNumberInput: React.FC<ThemedNumberInputProps> = ({
   textColor,
   minNumber,
   maxNumber,
+  onNumberSelect,
 }) => {
   const [number, setNumber] = useState(defaultNumber);
   const [toggleDropDown, setToggleDropdown] = useState(false);
@@ -24,6 +26,8 @@ const ThemedNumberInput: React.FC<ThemedNumberInputProps> = ({
     { length: maxNumber - minNumber + 1 },
     (_, i) => minNumber + i,
   );
+
+  useEffect(() => onNumberSelect(number), [number]);
 
   return (
     <View className="flex-row flex-wrap py-1 items-center justify-start">

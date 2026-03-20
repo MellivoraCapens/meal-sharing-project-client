@@ -32,7 +32,7 @@ const ThemedView: React.FC<ThemedViewProps> = ({
 
   const insets = useSafeAreaInsets();
 
-  const bottomPadding = Platform.OS === "ios" ? 270 + insets.bottom : 65;
+  const bottomPadding = Platform.OS === "ios" ? 56 : 65;
 
   const HTML = (
     <Pressable

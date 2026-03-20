@@ -2,6 +2,7 @@ import { Stack } from "expo-router";
 import UserOnly from "../../Components/Auth/UserOnly";
 import { useColorScheme } from "react-native";
 import colors from "../../constants/Color";
+import { DishProvider } from "../../Contexts/DishContext";
 
 export default function MainLayout() {
   const colorSheme = useColorScheme() || "light";
@@ -9,18 +10,20 @@ export default function MainLayout() {
 
   return (
     <UserOnly>
-      <Stack
-        screenOptions={{
-          headerShown: false,
-          title: "Main",
-          headerTintColor: color.text,
-          headerTitleAlign: "center",
-          headerStyle: {
-            backgroundColor: color.secondary,
-          },
-          headerShadowVisible: false,
-        }}
-      ></Stack>
+      <DishProvider>
+        <Stack
+          screenOptions={{
+            headerShown: false,
+            title: "Main",
+            headerTintColor: color.text,
+            headerTitleAlign: "center",
+            headerStyle: {
+              backgroundColor: color.secondary,
+            },
+            headerShadowVisible: false,
+          }}
+        ></Stack>
+      </DishProvider>
     </UserOnly>
   );
 }

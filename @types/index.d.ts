@@ -33,6 +33,22 @@ declare global {
     password: string;
   }
 
+  interface PhotonFeature {
+    type: string;
+    geometry: {
+      type: string;
+      coordinates: [number, number];
+    };
+    properties: {
+      name: string;
+      country: string;
+      state?: string;
+      district?: string;
+      street?: string;
+      postcode?: string;
+    };
+  }
+
   type TextSizes =
     | "xs"
     | "sm"
