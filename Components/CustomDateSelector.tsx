@@ -1,6 +1,6 @@
 import { ScrollView, View } from "react-native";
-import ThemedText from "./ThemedText";
-import ThemedButton from "./ThemedButton";
+import ThemedText from "./UI/ThemedText";
+import ThemedButton from "./UI/ThemedButton";
 import { useState } from "react";
 
 interface CustomDateSelectorProps {

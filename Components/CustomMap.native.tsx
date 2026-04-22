@@ -7,9 +7,9 @@ import colors from "../constants/Color";
 // Hooks
 import { useUserLocation } from "../Hooks/useUserLocation";
 // Themed Components
-import ThemedTextInput from "./ThemedTextInput";
-import ThemedButton from "./ThemedButton";
-import ThemedText from "./ThemedText";
+import ThemedTextInput from "./UI/ThemedTextInput";
+import ThemedButton from "./UI/ThemedButton";
+import ThemedText from "./UI/ThemedText";
 import Ionicons from "@expo/vector-icons/Ionicons";
 
 interface CustomMapProps {
@@ -65,15 +65,6 @@ const CustomMap: React.FC<CustomMapProps> = ({
       });
     }
   };
-
-  useEffect(() => {
-    if (location) {
-      setUserLocation({
-        latitude: location?.coords.latitude,
-        longitude: location?.coords.longitude,
-      });
-    }
-  }, [location]);
 
   useEffect(
     () => onLocationSelect([userLocation.longitude, userLocation.latitude]),

@@ -1,6 +1,6 @@
 import { Pressable, Text, TextInput, useColorScheme, View } from "react-native";
 
-import colors from "../constants/Color";
+import colors from "../../constants/Color";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { useState } from "react";
 

@@ -5,7 +5,7 @@ import {
   CherryBombOne_400Regular,
   useFonts,
 } from "@expo-google-fonts/cherry-bomb-one";
-import ThemedLoader from "../../../Components/ThemedLoader";
+import ThemedLoader from "../../../Components/UI/ThemedLoader";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { useAuth } from "../../../Hooks/useAuth";
 

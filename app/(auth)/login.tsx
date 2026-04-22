@@ -1,10 +1,10 @@
 import { Pressable, View } from "react-native";
 import { useRouter } from "expo-router";
 // Components
-import ThemedButton from "../../Components/ThemedButton";
-import ThemedText from "../../Components/ThemedText";
-import ThemedTextInput from "../../Components/ThemedTextInput";
-import ThemedView from "../../Components/ThemedView";
+import ThemedButton from "../../Components/UI/ThemedButton";
+import ThemedText from "../../Components/UI/ThemedText";
+import ThemedTextInput from "../../Components/UI/ThemedTextInput";
+import ThemedView from "../../Components/UI/ThemedView";
 // Hooks
 import { useAuth } from "../../Hooks/useAuth";
 import { useState } from "react";

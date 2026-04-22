@@ -1,6 +1,6 @@
 import React from "react";
 import { Text, useColorScheme } from "react-native";
-import colors from "../constants/Color";
+import colors from "../../constants/Color";
 
 const TEXT_SIZES = {
   xs: " text-xs ",
@@ -19,6 +19,8 @@ const TEXT_SIZES = {
 
 interface ThemedTextProps {
   children: React.ReactNode;
+  numberOfLines?: number;
+  ellipsizeMode?: "tail" | "head" | "middle" | "clip";
   className?: string;
   textColor?: Colors;
   size?: TextSizes;
@@ -29,6 +31,7 @@ const ThemedText: React.FC<ThemedTextProps> = ({
   size,
   className,
   textColor,
+  ...props
 }) => {
   const colorScheme = useColorScheme() ?? "light";
   const color = textColor && colors[colorScheme][textColor];
@@ -37,6 +40,7 @@ const ThemedText: React.FC<ThemedTextProps> = ({
 
   return (
     <Text
+      {...props}
       style={color ? { color } : {}}
       className={(className || "") + textSize}
     >

@@ -1,12 +1,15 @@
 import React from "react";
 import { Pressable, useColorScheme } from "react-native";
-import colors from "../constants/Color";
+import colors from "../../constants/Color";
 
 interface ThemedButtonProps {
   children: React.ReactNode;
   buttonColor?: Colors;
   onPress?: () => void;
   disabled?: boolean;
+  onFocus?: () => void;
+  onBlur?: () => void;
+  id?: string;
   className?: string;
 }
 

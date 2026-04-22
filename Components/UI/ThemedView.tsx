@@ -6,7 +6,7 @@ import {
   useWindowDimensions,
   View,
 } from "react-native";
-import colors from "../constants/Color";
+import colors from "../../constants/Color";
 import {
   SafeAreaView,
   useSafeAreaInsets,

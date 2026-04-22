@@ -4,16 +4,16 @@ import { Image, ScrollView, useColorScheme, View } from "react-native";
 import { MapContainer, TileLayer, useMap, useMapEvents } from "react-leaflet";
 import { useUserLocation } from "../Hooks/useUserLocation";
 // Themed Components
-import ThemedTextInput from "./ThemedTextInput";
-import ThemedButton from "./ThemedButton";
-import ThemedText from "./ThemedText";
+import ThemedTextInput from "./UI/ThemedTextInput";
+import ThemedButton from "./UI/ThemedButton";
+import ThemedText from "./UI/ThemedText";
 // Constants
 import colors from "../constants/Color";
 import { markerIcon } from "../constants/MarkerIcon";
 import { darkTile, lightTile, markerTexture } from "../constants/MapStyles";
 
 interface CustomMapProps {
-  savedLocation?: {
+  savedLocation: {
     latitude: number;
     longitude: number;
   };
@@ -28,8 +28,8 @@ const CustomMap: React.FC<CustomMapProps> = ({
   const color = colors[colorScheme];
 
   const [userLocation, setUserLocation] = useState({
-    latitude: savedLocation?.latitude || 0,
-    longitude: savedLocation?.longitude || 0,
+    latitude: savedLocation.latitude || 0,
+    longitude: savedLocation.longitude || 0,
   });
   const [zoom, setZoom] = useState(13);
   const { location, errorMsg } = useUserLocation();
@@ -89,10 +89,6 @@ const CustomMap: React.FC<CustomMapProps> = ({
       setShowAutoComplete(true);
     }
   };
-
-  useEffect(() => {
-    currentLocation();
-  }, [location]);
 
   useEffect(
     () => onLocationSelect([userLocation.longitude, userLocation.latitude]),

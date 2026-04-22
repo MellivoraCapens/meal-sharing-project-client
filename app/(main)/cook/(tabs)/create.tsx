@@ -1,5 +1,5 @@
-import CreateDish from "../../../Components/CreateDish";
-import ThemedView from "../../../Components/ThemedView";
+import CreateDish from "../../../../Components/CreateDish";
+import ThemedView from "../../../../Components/UI/ThemedView";
 
 const Create = () => {
   return (

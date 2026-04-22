@@ -1,5 +1,4 @@
 import * as Location from "expo-location";
-import { get } from "node:http";
 import { useEffect, useState } from "react";
 
 export const useUserLocation = () => {

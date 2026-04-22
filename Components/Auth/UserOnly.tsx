@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useAuth } from "../../Hooks/useAuth";
 import { useRouter } from "expo-router";
-import ThemedLoader from "../ThemedLoader";
+import ThemedLoader from "../UI/ThemedLoader";
 
 interface UserOnlyProps {
   children: React.ReactNode;

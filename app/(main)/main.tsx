@@ -1,6 +1,6 @@
 import { Pressable, useColorScheme } from "react-native";
-import ThemedText from "../../Components/ThemedText";
-import ThemedView from "../../Components/ThemedView";
+import ThemedText from "../../Components/UI/ThemedText";
+import ThemedView from "../../Components/UI/ThemedView";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import colors from "../../constants/Color";
 import { useAuth } from "../../Hooks/useAuth";

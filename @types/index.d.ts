@@ -49,6 +49,53 @@ declare global {
     };
   }
 
+  interface IDishForm {
+    title: string;
+    description: string;
+    cookId: string | undefined;
+    tags: string[];
+    servings: number;
+    availableAt: Date;
+    price: {
+      amount: string | null;
+      currency: string;
+    };
+    location: {
+      type: "Point";
+      coordinates: [number, number];
+    };
+  }
+
+  interface DishType {
+    _id: string;
+    title: string;
+    description: string;
+    cookId: string;
+    tags: string[];
+    servings: number;
+    availableServings: number;
+    status:
+      | "scheduled"
+      | "preparing"
+      | "ready"
+      | "done"
+      | "expired"
+      | "cancelled";
+    imgName: string | null;
+    imgUrl: string | null;
+    availableAt: Date;
+    price: {
+      amount: number;
+      currency: "USD" | "EUR" | "GBP" | "TRY";
+    };
+    location: {
+      type: "Point";
+      coordinates: [number, number];
+    };
+    createdAt: string;
+    updatedAt: string;
+  }
+
   type TextSizes =
     | "xs"
     | "sm"

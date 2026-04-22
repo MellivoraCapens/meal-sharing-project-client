@@ -4,10 +4,10 @@ import { useRouter } from "expo-router";
 import { useEffect, useState } from "react";
 import { useAuth } from "../../Hooks/useAuth";
 // Components
-import ThemedButton from "../../Components/ThemedButton";
-import ThemedText from "../../Components/ThemedText";
-import ThemedTextInput from "../../Components/ThemedTextInput";
-import ThemedView from "../../Components/ThemedView";
+import ThemedButton from "../../Components/UI/ThemedButton";
+import ThemedText from "../../Components/UI/ThemedText";
+import ThemedTextInput from "../../Components/UI/ThemedTextInput";
+import ThemedView from "../../Components/UI/ThemedView";
 
 const SignUp = () => {
   const { signup } = useAuth();

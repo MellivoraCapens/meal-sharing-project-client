@@ -1,4 +1,4 @@
-import ThemedView from "../../../Components/ThemedView";
+import ThemedView from "../../../../Components/UI/ThemedView";
 
 const Notification = () => {
   return <ThemedView></ThemedView>;

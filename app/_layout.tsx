@@ -8,7 +8,7 @@ import {
   useFonts,
 } from "@expo-google-fonts/cherry-bomb-one";
 // Components
-import ThemedLoader from "../Components/ThemedLoader";
+import ThemedLoader from "../Components/UI/ThemedLoader";
 import { TagProvider } from "../Contexts/TagContext";
 
 if (Platform.OS === "web") {
